@@ -1,0 +1,154 @@
+html{
+  height: 100vh;
+  width: 100vw;
+}
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-attachment: fixed;
+  color: #333;
+  width: 100%;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 60%;
+}
+
+/* Container with semi-transparent backdrop */
+.container {
+
+  width: 70%;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #71b4ea;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.25rem;
+  color: #444;
+}
+
+/* Palette grid */
+.palette {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Swatch (color tile) */
+.swatch {
+  width: 100%;
+  padding-bottom: 100%;
+  /* aspect-ratio 1:1 */
+  position: relative;
+  border-radius: 4px;
+  cursor: default;
+  overflow: hidden;
+}
+
+.swatch__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swatch__label {
+  color: #fff;
+  font-weight: bold;
+  user-select: none;
+}
+
+/* NameForm */
+.name-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.name-form__input {
+  flex: 1;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.name-form__button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.name-form__button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.name-form__button:not(:disabled):hover {
+  background-color: #2980b9;
+}
+
+/* Result view */
+.result {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.result h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.result p {
+  margin: 0.25rem 0;
+}
+
+/* Reset button */
+.reset-button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.reset-button:hover {
+  background-color: #c0392b;
+}
